@@ -1,0 +1,90 @@
+/*===================*/
+/*= General resets =*/
+/*=================*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--main-bg-color);
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+    margin: 0; 
+}
+
+h1{
+    display: block;
+}
+
+li{
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
+a{
+    text-decoration: none;
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*===================*/
+/*==== Variables ===*/
+/*=================*/
+
+:root {
+    /* Colores */
+    --yellow-header: #FFEC88;
+    --blue-general: #002E77;
+    --font-white-color: #FFFFF8;
+    --white-background: #F5F5F5;
+    /* Fonts */
+    --heading1-fs: clamp(5rem, 8vw + 1rem, 9.375rem);
+    --heading2-fs: 100px;
+    --heading3-fs: 3.5rem;
+    --heading4-fs: 32px;
+    --heading5-fs: 1.75rem;
+    --subHeading1-fs: 1.5rem;
+    --subHeading2-fs: 0.875rem;
+    --navText-fs: 1rem;
+    --body-fs: 1.125rem;
+    /* Font Family */
+    --font-family: 'Mulish', sans-serif;
+
+}
