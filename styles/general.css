@@ -98,7 +98,6 @@ select {
     /* Font Family */
     --font-family: 'Mulish', sans-serif;
     --font-family-menu: 'Rajdhani', sans-serif;
-
 }
 
 /* ============================================= */
@@ -154,6 +153,9 @@ select {
         width: 300px;
         height: 100px;
         margin: 1em;
+    }
+    .header-nav-ul{
+        font-size: 1.25rem;
     }
     .header-logo{
         display: none;
