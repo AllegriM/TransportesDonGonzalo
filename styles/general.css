@@ -111,6 +111,7 @@ select {
     flex-direction: row;
     align-items: center;
     padding: .75rem .4rem;
+    height: 18vh;
 }
 
 .header-nav{
@@ -133,6 +134,9 @@ select {
 }
 
 @media screen and (max-width: 768px) {
+    .header{
+        height: 10vh;
+    }
     .header-full-logo{
         display: none;
     }
