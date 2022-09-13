@@ -1,0 +1,414 @@
+/*===================*/
+/*= General resets =*/
+/*=================*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  /* font-size: 10px; Esto deberia ser asi y hay que ajustar los rem cuando lo cambiemos */
+}
+
+body,
+html {
+  background-color: var(--main-bg-color);
+  min-height: 100vh;
+  height: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1 {
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.white-word {
+  color: var(--font-white-color);
+}
+
+.blue-word {
+  color: var(--blue-general);
+}
+
+/*========================================*/
+/*============ Variables ================*/
+/*======================================*/
+
+:root {
+  /* Colores */
+  --yellow-header: #ffec88;
+  --blue-general: #002e77;
+  --font-white-color: #fffff8;
+  --white-background: #f5f5f5;
+  /* Fonts */
+  --heading1-fs: clamp(5rem, 8vw + 1rem, 9.375rem);
+  --heading2-fs: 100px;
+  --heading3-fs: 3.5rem;
+  --heading4-fs: 32px;
+  --heading5-fs: 1.75rem;
+  --subHeading1-fs: 1.5rem;
+  --subHeading2-fs: 0.875rem;
+  --navText-fs: 1rem;
+  --body-fs: 1.125rem;
+  /* Font Family */
+  --font-family: "Mulish", sans-serif;
+  --font-family-menu: "Rajdhani", sans-serif;
+}
+
+/* ============================================= */
+/*=============== NAV BAR STYLES ===============*/
+/* ============================================= */
+
+.header {
+  background-color: var(--blue-general);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.75rem 0.4rem;
+}
+
+.header-nav {
+  width: 100%;
+  background-color: var(--blue-general);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.header-nav-ul {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  font-family: var(--font-family-menu);
+  /* font-size: var(--subHeading2-fs); */
+  font-size: 0.75rem;
+  max-width: 1200px;
+}
+
+.header-nav-li-link {
+  color: var(--font-white-color);
+}
+
+/* ============================================= */
+/*=============== MAIN STYLES ==================*/
+/* ============================================= */
+
+/* Home */
+
+.main-subtitle {
+  display: block;
+  text-align: center;
+  margin: 8vh 3vw;
+  color: var(--blue-general);
+}
+
+.main-question {
+  color: var(--blue-general);
+  display: block;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.main-scroll {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+}
+
+.main-scroll::-webkit-scrollbar {
+  width: 0;
+}
+
+.main-scroll-img {
+  border-radius: 50%;
+  border: 5px solid var(--blue-general);
+}
+
+.main-scroll-img-text {
+  display: block;
+  text-align: center;
+  width: 100%;
+  color: var(--blue-general);
+}
+
+/* Conocenos */
+
+.section-about {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3vw;
+}
+
+.about-banner-img {
+  max-width: 500px;
+  width: 100%;
+}
+
+.about-objetivo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 85%;
+}
+
+.about-bluebox {
+  font-family: var(--font-family);
+  position: relative;
+  background-color: var(--blue-general);
+  color: var(--font-white-color);
+  border-radius: 20px;
+  padding: 0.5rem 0.5rem 0.5rem 3rem;
+  max-width: 360px;
+  margin: 1rem 0;
+}
+
+.about-bluebox-title {
+  top: 10px;
+  left: -60px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--yellow-header);
+  width: 6rem;
+  height: 6rem;
+  border-radius: 60%;
+  color: var(--blue-general);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.about-bluebox-desc {
+  max-width: 30ch;
+  font-size: 0.95rem;
+}
+
+/* SERVICIOS */
+
+.services-title {
+  text-align: center;
+  margin-top: 5rem;
+  color: var(--blue-general);
+}
+
+.services-box {
+  background-color: var(--blue-general);
+  color: #fff;
+  text-align: center;
+  padding: 3rem 0.8rem 1rem 0.8rem;
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 20rem;
+}
+
+.services-box-icon {
+  width: 6rem;
+  height: 6rem;
+  background-color: var(--yellow-header);
+  position: absolute;
+  border-radius: 50%;
+  top: -3rem;
+}
+
+.services-box-span {
+  margin: 1rem 0;
+  font-size: 1.25rem;
+}
+
+.services-box-text {
+  /*pendiente sino lo borro*/
+}
+
+/* ============================================= */
+/*=============== MEDIA QUERIES =================*/
+/* ============================================= */
+
+@media screen and (max-width: 768px) {
+  /*header*/
+
+  .header {
+    height: 10vh;
+  }
+
+  .header-full-logo {
+    display: none;
+  }
+
+  .header-logo {
+    display: block;
+    width: 8%;
+  }
+
+  /*main*/
+
+  .main-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .main-question {
+    font-size: 1.25rem;
+  }
+
+  .br-1,
+  .br-2 {
+    display: block;
+  }
+
+  .main-scroll-img {
+    min-width: 37vw;
+    height: 37vw;
+    margin: 5px 10px;
+  }
+
+  .about-bluebox-title {
+    top: 5px;
+  }
+
+  .about-objetivo {
+    margin-left: auto;
+  }
+
+  .about-bluebox-desc {
+    font-size: 0.85rem;
+  }
+
+  /* SERVICES */
+
+  .services-title {
+    font-size: 1.25rem;
+  }
+
+  .services-box {
+    width: 70vw;
+    margin: 5rem auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /*header*/
+
+  .header {
+    flex-direction: column;
+    background-color: var(--yellow-header);
+    padding: 0.75rem 0 0;
+  }
+
+  .header-full-logo {
+    display: block;
+    width: 300px;
+    height: auto;
+    margin: 1em;
+  }
+
+  .header-nav-ul {
+    font-size: 1.25rem;
+  }
+
+  .header-logo {
+    display: none;
+  }
+
+  .header-nav {
+    padding: 1rem;
+  }
+
+  /*main*/
+
+  .main-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .main-question {
+    font-size: 1.5rem;
+  }
+
+  .br-1 {
+    display: block;
+  }
+
+  .main-scroll {
+    justify-content: center;
+  }
+
+  .main-scroll-img {
+    width: 200px;
+    height: 200px;
+    margin: 15px 20px;
+  }
+
+  .main-scroll-img-text {
+    font-size: 1.25rem;
+  }
+
+  /* SERVICES */
+
+  .services-container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .services-box {
+    margin: 5rem 2rem;
+  }
+  .services-title {
+    font-size: 1.5rem;
+  }
+}
