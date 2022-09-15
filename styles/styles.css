@@ -223,8 +223,8 @@ select {
   align-items: center;
   justify-content: center;
   background-color: var(--yellow-header);
-  width: 6rem;
-  height: 6rem;
+  width: 5.5rem;
+  height: 5.5rem;
   border-radius: 60%;
   color: var(--blue-general);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -257,21 +257,24 @@ select {
 }
 
 .services-box-icon {
-  width: 6rem;
-  height: 6rem;
-  background-color: var(--yellow-header);
+  width: 5.5rem;
+  height: 5.5rem;
   position: absolute;
   border-radius: 50%;
   top: -3rem;
 }
 
 .services-box-span {
-  margin: 1rem 0;
-  font-size: 1.25rem;
+  margin: 0 0 1rem 0;
+  font-size: 1.3rem;
 }
 
 .services-box-text {
-  /*pendiente sino lo borro*/
+  font-size: 1.1rem;
+}
+
+.services-box:nth-child(3) .services-box-text {
+  padding: 1.1rem 0;
 }
 
 /* ============================================= */
@@ -334,7 +337,7 @@ select {
   }
 
   .services-box {
-    width: 70vw;
+    width: 80vw;
     margin: 5rem auto;
   }
 }
@@ -397,6 +400,10 @@ select {
 
   /* SERVICES */
 
+  .services-title {
+    font-size: 2rem;
+  }
+
   .services-container {
     display: flex;
     width: 100%;
@@ -407,8 +414,5 @@ select {
 
   .services-box {
     margin: 5rem 2rem;
-  }
-  .services-title {
-    font-size: 1.5rem;
   }
 }
