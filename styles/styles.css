@@ -13,15 +13,15 @@
   box-sizing: border-box;
 }
 
-body {
-  /* font-size: 10px; Esto deberia ser asi y hay que ajustar los rem cuando lo cambiemos */
-}
-
 body,
 html {
   background-color: var(--main-bg-color);
   min-height: 100vh;
   height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body,
@@ -168,9 +168,30 @@ select {
   width: 0;
 }
 
+.img-1 {
+  background-image: url("/imgs/Peso exacto (original).jpeg");
+  background-position-x: -30px;
+}
+
+.img-2 {
+  background-image: url("/imgs/Protocolo\ y\ salubridad\ \(original\).jpeg");
+  background-position-y: -40px;
+}
+
+.img-3 {
+  background-image: url("/imgs/Entrega\ de\ reportes\ \(original\).JPG");
+  background-position-x: -40px;
+}
+
+.img-4 {
+  background-image: url("/imgs/Precio\ competitivo\ \(original\).jpeg");
+  background-position-y: -20px;
+}
+
 .main-scroll-img {
   border-radius: 50%;
   border: 5px solid var(--blue-general);
+  background-size: cover;
 }
 
 .main-scroll-img-text {
@@ -254,6 +275,7 @@ select {
   flex-direction: column;
   align-items: center;
   max-width: 20rem;
+  height: 200px;
 }
 
 .services-box-icon {
@@ -386,6 +408,10 @@ select {
 
   .main-scroll {
     justify-content: center;
+  }
+
+  .img-2 {
+    background-position-y: -60px;
   }
 
   .main-scroll-img {
