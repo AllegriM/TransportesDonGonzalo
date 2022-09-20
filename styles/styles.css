@@ -337,6 +337,7 @@ select {
 .contact-form {
   display: flex;
   margin: 0 auto;
+  margin-bottom: 10%;
   flex-direction: column;
   gap: 30px;
   width: 100%;
@@ -379,12 +380,16 @@ textarea {
 }
 
 i {
-  font-size: 1.25rem;
+  font-size: 1.45rem;
   color: var(--blue-general);
 }
 
 .social-data {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  min-height: 50px;
   width: 100%;
   left: 0;
   bottom: 0;
@@ -399,6 +404,7 @@ i {
 .social-text {
   font-size: .75rem;
   color: var(--blue-general);
+  display: none;
 }
 
 .hashtag {
@@ -664,6 +670,7 @@ i {
   }
 
   .social-text {
+    display: block;
     font-size: 1.10rem;
   }
 
