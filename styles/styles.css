@@ -115,14 +115,15 @@ select {
   flex-direction: row;
   align-items: center;
   padding: 0.75rem 0.4rem;
+  width: 100vw;
+  position: fixed;
+  top:0;
+  z-index: 9999;
 }
 
 .header-nav {
   width: 100%;
-  background-color: var(--blue-general);
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
+  background-color: var(--blue-general);  
 }
 
 .header-nav-ul {
@@ -169,30 +170,11 @@ select {
   width: 0;
 }
 
-.img-1 {
-  background-image: url("/imgs/Peso exacto (original).jpeg");
-  background-position-x: -30px;
-}
-
-.img-2 {
-  background-image: url("/imgs/Protocolo\ y\ salubridad\ \(original\).jpeg");
-  background-position-y: -40px;
-}
-
-.img-3 {
-  background-image: url("/imgs/Entrega\ de\ reportes\ \(original\).JPG");
-  background-position-x: -40px;
-}
-
-.img-4 {
-  background-image: url("/imgs/Precio\ competitivo\ \(original\).jpeg");
-  background-position-y: -20px;
-}
-
 .main-scroll-img {
   border-radius: 50%;
   border: 5px solid var(--blue-general);
-  background-size: cover;
+  object-fit: cover;
+  width: 0;
 }
 
 .main-scroll-img-text {
@@ -283,7 +265,7 @@ select {
   flex-direction: column;
   align-items: center;
   max-width: 20rem;
-  height: 200px;
+  height: 250px;
 }
 
 .services-box-icon {
@@ -434,11 +416,15 @@ i {
   /*main*/
 
   .main-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
+  }
+
+  .subtitle-margin{
+    margin: 15vh 2vw 5vh;
   }
 
   .main-question {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
 
   .br-1,
@@ -483,6 +469,7 @@ i {
     flex-direction: column;
     background-color: var(--yellow-header);
     padding: 0.75rem 0 0;
+    height: 35vh;
   }
 
   .header-full-logo {
@@ -508,6 +495,10 @@ i {
 
   .main-subtitle {
     font-size: 1.5rem;
+  }
+
+  .subtitle-margin{
+    margin: 40vh 2vw 5vh;
   }
 
   .main-question {
