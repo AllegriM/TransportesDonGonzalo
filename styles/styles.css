@@ -469,7 +469,6 @@ i {
     flex-direction: column;
     background-color: var(--yellow-header);
     padding: 0.75rem 0 0;
-    height: 35vh;
   }
 
   .header-full-logo {
