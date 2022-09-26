@@ -338,7 +338,7 @@ select {
   flex-direction: column;
   justify-content: center;
   gap: 40px;
-  height: 100vh;
+  height: 80vh;
 }
 
 .contact-title {
@@ -408,13 +408,19 @@ i {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 80px;
   min-height: 50px;
   width: 100%;
   left: 0;
   bottom: 0;
   position: absolute;
   background-color: var(--yellow-header);
+}
+
+.social-data-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
 }
 
 .social-info {
@@ -439,7 +445,7 @@ i {
 
 .swiper {
   width: 100%;
-  height: 400px;
+  height: 370px;
   position: relative;
 }
 
@@ -459,6 +465,11 @@ i {
 .swiper {
   margin-left: auto;
   margin-right: auto;
+}
+
+.active-link{
+  border-bottom: 2px solid var(--font-white-color);
+  padding-bottom: 1px;
 }
 
 /* ============================================= */
@@ -761,6 +772,7 @@ i {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
     gap: 30px;
   }
 
