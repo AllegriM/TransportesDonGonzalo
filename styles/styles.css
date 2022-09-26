@@ -190,18 +190,19 @@ select {
 
 .section-about {
   margin: 0 auto;
-  max-width: 1200px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 3vw;
+  /* padding: 0 3vw; */
 }
 
 .about-banner-img {
-  max-height: 250px;
-  width: 100%;
-  margin-right: 1rem;
+  flex-shrink: 0;
+  object-fit: cover;
+  height: 335px;
+  width: 40vw;
   border-radius: 20px;
 }
 
@@ -241,7 +242,6 @@ select {
 
 .about-bluebox-desc {
   max-width: 30ch;
-  font-size: 0.95rem;
 }
 
 /* ================================================= */
@@ -279,10 +279,6 @@ select {
 .services-box-span {
   margin: 0 0 1rem 0;
   font-size: 1.3rem;
-}
-
-.services-box-text {
-  font-size: 1.1rem;
 }
 
 .services-box:nth-child(3) .services-box-text {
@@ -435,6 +431,36 @@ i {
   display: none;
 }
 
+.blue-box-texts{
+  font-size: 1.1rem;
+}
+
+/* Swiper style */
+
+.swiper {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+.swiper-slide {
+  height: 335px;
+  width: 40vw;
+}
+
+.swiper-slide img {
+  flex-shrink: 0;
+  object-fit: cover;
+  height: 335px;
+  width: 40vw;
+  border-radius: 20px;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* ============================================= */
 /*=============== MEDIA QUERIES =================*/
 /* ============================================= */
@@ -443,7 +469,7 @@ i {
   /*header*/
 
   .header {
-    height: 15vh;
+    height: 10vh;
   }
 
   .header-full-logo {
@@ -462,7 +488,7 @@ i {
   }
 
   .subtitle-margin {
-    margin: 20vh 2vw 5vh;
+    margin: 15vh 2vw 5vh;
   }
 
   .main-question {
@@ -488,10 +514,6 @@ i {
     margin-left: auto;
   }
 
-  .about-bluebox-desc {
-    font-size: 0.85rem;
-  }
-
   /* SERVICES */
 
   .services-title {
@@ -512,6 +534,26 @@ i {
   .faq-box-text {
     padding: 0 0.5rem;
   }
+
+  .blue-box-texts{
+    font-size: 1rem;
+  }
+  /* ABOUT */
+  .about-banner-img{
+    height: 250px;
+    width: 95vw;
+  }
+
+  /* SWIPER */
+  .swiper {
+    width: 100%;
+    height: 250px;
+    margin: 0 1em;
+  }
+  .about-images{
+    margin : 0 1em;
+  }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -549,7 +591,7 @@ i {
   }
 
   .subtitle-margin {
-    margin: 40vh 2vw 5vh;
+    margin: 30vh 2vw 5vh;
   }
 
   .main-question {
@@ -615,7 +657,7 @@ i {
   .about-bluebox-desc {
     text-align: center;
     max-width: 100%;
-    font-size: 1.15rem;
+    font-weight: 100;
   }
 
   /* SERVICES */
@@ -677,6 +719,7 @@ i {
     gap: 30px;
     max-width: 800px;
     width: 100%;
+    padding-right: 2rem;
   }
 
   .contact-form::after {
@@ -706,9 +749,19 @@ i {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 30px;
     background-color: transparent;
+    align-items: flex-start;
+    margin-left: 2rem;
+  }
+
+  .social-data-container{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
   }
 
   .social-info {
@@ -729,5 +782,6 @@ i {
     font-size: 1.45rem;
     font-weight: bold;
     color: #e7cc43;
+    margin-bottom: .5rem;
   }
 }
