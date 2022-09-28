@@ -6,8 +6,7 @@ document.documentElement.style.setProperty('scroll-padding', navigationHeight + 
 // If intersection observer is on section then add underline to nav bar link
 const options = {
     root: null,
-    threshold: 0.5,
-    rootMargin: '-50px'
+    rootMargin: '-200px'
 };
 
 const observer = new IntersectionObserver(function (entries, observer) {

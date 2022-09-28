@@ -89,17 +89,6 @@ select {
   --yellow-header: #ffec88;
   --blue-general: #002e77;
   --font-white-color: #fffff8;
-  --white-background: #f5f5f5;
-  /* Fonts */
-  --heading1-fs: clamp(5rem, 8vw + 1rem, 9.375rem);
-  --heading2-fs: 100px;
-  --heading3-fs: 3.5rem;
-  --heading4-fs: 32px;
-  --heading5-fs: 1.75rem;
-  --subHeading1-fs: 1.5rem;
-  --subHeading2-fs: 0.875rem;
-  --navText-fs: 1rem;
-  --body-fs: 1.125rem;
   /* Font Family */
   --font-family: "Mulish", sans-serif;
   --font-family-menu: "Rajdhani", sans-serif;
@@ -109,34 +98,48 @@ select {
 /*=============== NAV BAR STYLES ===============*/
 /* ============================================= */
 
-.header {
-  background-color: var(--blue-general);
+.header-container {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0.75rem 0.4rem;
+  flex-direction: column;
   width: 100vw;
   position: fixed;
   top: 0;
   z-index: 9999;
 }
 
-.header-nav {
+.header-box-img {
+  height: 20vh;
+  background-color: var(--yellow-header);
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-img-mobile {
+  display: none;
+}
+
+.header-img-desktop {
+  width: 300px;
+}
+
+.header-nav-box {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
   background-color: var(--blue-general);
 }
 
-.header-nav-ul {
-  display: flex;
-  justify-content: space-around;
-  margin: 0 auto;
-  font-family: var(--font-family-menu);
-  /* font-size: var(--subHeading2-fs); */
-  font-size: 0.75rem;
-  max-width: 1200px;
+.header-nav-box-link a {
+  padding: 15px;
 }
 
-.header-nav-li-link {
+.header-nav-box-link a:visited,
+.header-nav-box-link a:link {
   color: var(--font-white-color);
 }
 
@@ -416,7 +419,7 @@ i {
   background-color: var(--yellow-header);
 }
 
-.social-data-container{
+.social-data-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -437,7 +440,7 @@ i {
   display: none;
 }
 
-.blue-box-texts{
+.blue-box-texts {
   font-size: 1.1rem;
 }
 
@@ -467,7 +470,7 @@ i {
   margin-right: auto;
 }
 
-.active-link{
+.active-link {
   border-bottom: 2px solid var(--font-white-color);
   padding-bottom: 1px;
 }
@@ -479,17 +482,31 @@ i {
 @media screen and (max-width: 768px) {
   /*header*/
 
-  .header {
-    height: 10vh;
+  .header-container {
+    flex-direction: row;
+    background-color: var(--blue-general);
   }
 
-  .header-full-logo {
+  .header-box-img {
+    width: 10vw;
+    height: 10vh;
+    background-color: transparent;
+  }
+
+  .header-img-desktop {
     display: none;
   }
 
-  .header-logo {
-    display: block;
-    width: 8%;
+  .header-img-mobile {
+    display: inline-block;
+  }
+
+  .header-nav-box {
+    width: 90vw;
+    position: absolute;
+    font-size: 10px;
+    justify-content: space-around;
+    text-align: center;
   }
 
   /*main*/
@@ -546,11 +563,11 @@ i {
     padding: 0 0.5rem;
   }
 
-  .blue-box-texts{
+  .blue-box-texts {
     font-size: 1rem;
   }
   /* ABOUT */
-  .about-banner-img{
+  .about-banner-img {
     height: 250px;
     width: 95vw;
   }
@@ -561,40 +578,12 @@ i {
     height: 250px;
     margin: 0 1em;
   }
-  .about-images{
-    margin : 0 1em;
+  .about-images {
+    margin: 0 1em;
   }
-
 }
 
 @media screen and (min-width: 768px) {
-  /*header*/
-
-  .header {
-    flex-direction: column;
-    background-color: var(--yellow-header);
-    padding: 0.75rem 0 0;
-  }
-
-  .header-full-logo {
-    display: block;
-    width: 300px;
-    height: auto;
-    margin: 1em;
-  }
-
-  .header-nav-ul {
-    font-size: 1.25rem;
-  }
-
-  .header-logo {
-    display: none;
-  }
-
-  .header-nav {
-    padding: 1rem;
-  }
-
   /*main*/
 
   .main-subtitle {
@@ -602,7 +591,7 @@ i {
   }
 
   .subtitle-margin {
-    margin: 30vh 2vw 5vh;
+    margin: 35vh 2vw 5vh;
   }
 
   .main-question {
@@ -767,7 +756,7 @@ i {
     margin-left: 2rem;
   }
 
-  .social-data-container{
+  .social-data-container {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -794,6 +783,13 @@ i {
     font-size: 1.45rem;
     font-weight: bold;
     color: #e7cc43;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media screen and (max-with: 300px) {
+  .header-nav-box-link {
+    padding: 0 5px;
+    font-size: 8px;
   }
 }
