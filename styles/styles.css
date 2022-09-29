@@ -447,27 +447,7 @@ i {
 /* Swiper style */
 
 .swiper {
-  width: 100%;
   height: 370px;
-  position: relative;
-}
-
-.swiper-slide {
-  height: 335px;
-  width: 40vw;
-}
-
-.swiper-slide img {
-  flex-shrink: 0;
-  object-fit: cover;
-  height: 335px;
-  width: 40vw;
-  border-radius: 20px;
-}
-
-.swiper {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .active-link {
@@ -573,14 +553,6 @@ i {
   }
 
   /* SWIPER */
-  .swiper {
-    width: 100%;
-    height: 250px;
-    margin: 0 1em;
-  }
-  .about-images {
-    margin: 0 1em;
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -686,7 +658,7 @@ i {
   }
 
   .faq-box-text {
-    padding: 0 3rem;
+    padding: 0 5rem;
   }
 
   /* Contact */
@@ -719,7 +691,7 @@ i {
     gap: 30px;
     max-width: 800px;
     width: 100%;
-    padding-right: 2rem;
+    padding-right: 5vw;
   }
 
   .contact-form::after {
@@ -753,7 +725,7 @@ i {
     gap: 30px;
     background-color: transparent;
     align-items: flex-start;
-    margin-left: 2rem;
+    margin-left: 5vw;
   }
 
   .social-data-container {
