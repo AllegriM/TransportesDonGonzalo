@@ -11,8 +11,6 @@
       href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;600;700;800&family=Rajdhani:wght@600;700&display=swap"
       rel="stylesheet"
     />
-    <!-- LINK CSS -->
-    <link rel="stylesheet" href="./styles/styles.css" />
     <!-- FONT AWESOME -->
     <link
       rel="stylesheet"
@@ -23,6 +21,13 @@
     />
     <!-- CDN SWIPER -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="./styles/styles.css" />
+
+    <!-- SCRIPT -->
+    <script defer src="./index.js"></script>
+
     <!-- Title -->
     <title>Transportes Don Gonzalo</title>
   </head>
@@ -34,7 +39,7 @@
 
     <header class="header-container">
       <div class="header-box-img">
-        <a class="header-box-img-link">
+        <a href="#home" class="header-box-img-link">
           <img class="header-img-desktop" src="./imgs/don-gonzalo-logo.png" />
           <img class="header-img-mobile" src="./imgs//DonGonzalogo.png" />
         </a>
@@ -85,27 +90,19 @@
       <section id="about" class="section-about">
         <div class="about-images">
           <!-- swiper -->
-          <!-- Slider main container -->
           <div class="swiper mySwiper">
-            <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
-              <!-- Slides -->
               <img class="swiper-slide about-banner-img" src="./imgs/vision1.jpeg" alt="imagen de camion" />
               <img class="swiper-slide about-banner-img" src="./imgs/vision2.jpeg" alt="imagen de camion" />
               <img class="swiper-slide about-banner-img" src="./imgs/vision3.jpeg" alt="imagen de camion" />
+              <img class="swiper-slide about-banner-img" src="./imgs/vision4.jpeg" alt="imagen de camion" />
             </div>
-            <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
-            <!-- If we need navigation buttons -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
           </div>
-          <!-- <div class="main-scroll">
-          <img class="about-banner-img" src="./imgs/vision1.jpeg" alt="imagen de camion" />
-          <img class="about-banner-img" src="./imgs/vision2.jpeg" alt="imagen de camion" />
-          <img class="about-banner-img" src="./imgs/vision3.jpeg" alt="imagen de camion" />
-        </div> -->
         </div>
+
         <div class="about-info">
           <h2 class="main-subtitle">
             Somos un negocio con<strong> 9 años de experiencia</strong> en el transporte y aprovisionamiento<span class="br-1"></span> de agua no
@@ -242,7 +239,7 @@
       const swiper = new Swiper(".mySwiper", {
         loop: true,
         slidesPerView: 3,
-        spaceBetween: 40,
+        spaceBetween: 20,
         loopFillGroupWithBlank: true,
         loop: true,
         pagination: {
@@ -259,9 +256,8 @@
       } else {
         (swiper.slidesPerView = 3), (swiper.spaceBetween = 60);
       }
-      console.log(swiper);
-      console.log(window.innerWidth);
+      // console.log(swiper);
+      // console.log(window.innerWidth);
     </script>
-    <script src="./index.js"></script>
   </body>
 </html>

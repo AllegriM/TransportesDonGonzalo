@@ -444,10 +444,31 @@ i {
   font-size: 1.1rem;
 }
 
+.section-about {
+  overflow-x: hidden;
+}
+
 /* Swiper style */
 
 .swiper {
-  height: 370px;
+  height: 380px;
+}
+
+.swiper-pagination {
+  bottom: -30px;
+  z-index: 9999999;
+}
+
+.swiper-wrapper {
+  width: 150vw;
+}
+
+.swiper-button-next {
+  right: 29vw;
+}
+
+.swiper-button-prev {
+  left: 29vw;
 }
 
 .active-link {
@@ -553,6 +574,28 @@ i {
   }
 
   /* SWIPER */
+
+  .swiper {
+    height: 250px;
+  }
+
+  .swiper-wrapper {
+    width: 250vw;
+  }
+
+  .swiper-slide {
+    height: 200px;
+  }
+
+  .swiper-button-next {
+    right: 80vw;
+    top: 40%;
+  }
+
+  .swiper-button-prev {
+    left: 80vw;
+    top: 40%;
+  }
 }
 
 @media screen and (min-width: 768px) {
