@@ -1,12 +1,13 @@
 const sections = document.querySelectorAll('section');
 
-const navigationHeight = document.querySelector('.header')
+const navigationHeight = document.querySelector('#header').offsetHeight;
+console.log(navigationHeight)
 
-document.documentElement.style.setProperty('scroll-padding', navigationHeight + "px")
+document.documentElement.style.setProperty('--scroll-padding', navigationHeight + 20 + "px")
 // If intersection observer is on section then add underline to nav bar link
 const options = {
     root: null,
-    rootMargin: '-200px'
+    threshold: .5
 };
 
 const observer = new IntersectionObserver(function (entries, observer) {
@@ -27,6 +28,25 @@ const observer = new IntersectionObserver(function (entries, observer) {
 sections.forEach(section => {
     observer.observe(section);
 });
+
+const faqs = document.querySelectorAll('.faq-box')
+const services = document.querySelectorAll('.services-box')
+
+const observerReveal = new IntersectionObserver(function (entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('scroll-reveal');
+        }
+    })
+})
+
+faqs.forEach(box => {
+    observerReveal.observe(box)
+})
+
+services.forEach(box => {
+    observerReveal.observe(box)
+})
 
 // Send email
 

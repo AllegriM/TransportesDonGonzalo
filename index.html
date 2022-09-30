@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8" />
@@ -33,7 +33,7 @@
     
   </header> -->
 
-  <header class="header-container">
+  <header class="header-container" id="header">
     <div class="header-box-img">
       <a href="#home" class="header-box-img-link">
         <img class="header-img-desktop" src="./imgs/don-gonzalo-logo.png" />
@@ -44,7 +44,7 @@
       <ul class="header-nav-box">
         <li class="header-nav-box-link"><a class="nav-li-link-about" href="#about">CONOCENOS</a></li>
         <li class="header-nav-box-link"><a class="nav-li-link-services" href="#services">SERVICIOS</a></li>
-        <li class="header-nav-box-link"><a class="nav-li-link-faq" href="#faq">PREGUNTAS FRECUENTES</a></li>
+        <li class="header-nav-box-link"><a class="nav-li-link-faq" href="#faq">AYUDA</a></li>
         <li class="header-nav-box-link"><a class="nav-li-link-contact" href="#contact">CONTACTO</a></li>
       </ul>
     </nav>
@@ -52,38 +52,36 @@
 
   <main>
     <!-- HOME SECTION -->
-    <section id="home">
-      <h2 class="main-subtitle subtitle-margin">
+    <section id="home" class="section">
+      <h2 class="main-title subtitle-margin">¿Qué nos diferencia del resto?</h2>
+      <div class="main-subtitle">
         Podemos coberturar tu requerimiento de <span class="br-1"></span> <strong>transporte de agua</strong> bajo los
         <span class="br-2"></span>
         <strong>mejores estándares</strong>
-      </h2>
-      <span class="main-question">¿Qué nos diferencia del resto?</span>
+      </div>
       <div class="main-scroll">
-        <div>
+        <div class="main-scroll-box">
           <img class="main-scroll-img" src="./imgs/Peso-exacto.jpeg" />
           <span class="main-scroll-img-text">Peso exacto</span>
         </div>
-        <div>
+        <div class="main-scroll-box">
           <img class="main-scroll-img" src="./imgs/Protocolo-y-salubridad.jpeg" />
           <span class="main-scroll-img-text">Protocolos y salubridad</span>
         </div>
-        <div>
+        <div class="main-scroll-box">
           <img class="main-scroll-img" src="./imgs/Entrega-de-reportes.jpeg" />
           <span class="main-scroll-img-text">Entregas de reportes</span>
         </div>
-        <div>
+        <div class="main-scroll-box">
           <img class="main-scroll-img" src="./imgs/Precio-competitivo.jpeg" />
           <span class="main-scroll-img-text">Precio competitivo</span>
         </div>
       </div>
-      <span class="main-subtitle">
-        ¡Nos motiva contribuir al dearrollo de la región al participar de los procesos y proyectos de nuestros clientes!
-      </span>
     </section>
 
     <!-- ABOUT US SECTION -->
-    <section id="about" class="section-about">
+    <h2 class="about-title">¿Quienes Somos?</h2>
+    <section id="about" class="section-about section">
       <div class="about-images">
         <!-- swiper -->
         <div class="swiper mySwiper">
@@ -105,7 +103,7 @@
             class="br-1"></span> de agua no
           potable mediante camiones cisterna.
         </h2>
-        <span class="main-question">Nos encargamos de cubrir los pedidos para construcciones, plantas o negocios.</span>
+        <span class="main-subtitle">Nos encargamos de cubrir los pedidos para construcciones, plantas o negocios.</span>
       </div>
       <div class="about-objetivo">
         <div class="about-bluebox">
@@ -128,7 +126,7 @@
     </section>
 
     <!-- SERVICES SECTION -->
-    <section id="services">
+    <section id="services" class="section">
       <h2 class="services-title">¡Los mejores servicios para ti!</h2>
       <div class="services-container">
         <div class="services-box">
@@ -159,7 +157,7 @@
     </section>
 
     <!-- FAQ -->
-    <section id="faq">
+    <section id="faq" class="section">
       <h2 class="faq-subtitle">Te compartimos las preguntas más frecuentes que recibimos</h2>
       <div class="faq-container">
         <div class="faq-box">
@@ -198,7 +196,7 @@
       </div>
     </section>
   </main>
-  <section id="contact">
+  <section id="contact" class="section">
     <h2 class="contact-title">
       Si deseas una cotización,<span class="br-1"></span>
       <strong>¡no dudes en consultarnos!</strong>
@@ -222,15 +220,15 @@
 
       <div class="social-data">
         <div class="social-data-container">
-          <a href="#contact" class="social-info">
+          <a href="#" class="social-info">
             <i class="fa-solid fa-envelope"></i>
             <p class="social-text">fernandinhocelis@gmail.com</p>
           </a>
-          <a href="https://www.linkedin.com/company/transportes-don-gonzalo/" class="social-info">
+          <a href="#" class="social-info">
             <i class="fa-brands fa-linkedin"></i>
             <p class="social-text">Transportes Don Gonzalo</p>
           </a>
-          <a href="https://www.facebook.com/TranportesDonGonzalo" class="social-info">
+          <a href="#" class="social-info">
             <i class="fa-brands fa-facebook"></i>
             <p class="social-text">Transportes Don Gonzalo</p>
           </a>
@@ -241,11 +239,12 @@
   </section>
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
+  <!-- SWIPER -->
   <script>
     const swiper = new Swiper(".mySwiper", {
       loop: true,
       slidesPerView: 3,
-      spaceBetween: 20,
+      spaceBetween: 30,
       loopFillGroupWithBlank: true,
       loop: true,
       pagination: {
@@ -262,8 +261,6 @@
     } else {
       (swiper.slidesPerView = 3), (swiper.spaceBetween = 60);
     }
-      // console.log(swiper);
-      // console.log(window.innerWidth);
   </script>
 </body>
 
