@@ -162,7 +162,7 @@ select {
 
 .main-subtitle {
   text-align: center;
-  margin: 3rem 2vw;
+  margin: 2rem 2vw;
   color: var(--blue-general);
 }
 
@@ -259,6 +259,10 @@ select {
 /* ================================================= */
 /*=============== SERVICES STYLES ==================*/
 /* =============================================== */
+
+.services-container {
+  overflow-x: hidden;
+}
 
 .services-title {
   text-align: center;
