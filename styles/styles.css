@@ -23,6 +23,7 @@ html {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100vh;
 }
 
 body,
@@ -624,11 +625,6 @@ i {
     left: 79vw;
     top: 40%;
   }
-
-  .section {
-    padding-top: 10vh;
-    margin-top: -10vh;
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -854,11 +850,6 @@ i {
     font-weight: bold;
     color: #e7cc43;
     margin-bottom: 0.5rem;
-  }
-
-  .section {
-    padding-top: 30vh;
-    margin-top: -30vh;
   }
 }
 
