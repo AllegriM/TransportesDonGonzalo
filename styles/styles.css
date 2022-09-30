@@ -135,12 +135,17 @@ select {
 }
 
 .header-nav-box-link a {
-  padding: 15px;
+  padding: 10px;
+  transition: all 0.2s;
 }
 
 .header-nav-box-link a:visited,
 .header-nav-box-link a:link {
   color: var(--font-white-color);
+}
+
+.active-link {
+  border-bottom: 3px solid var(--font-white-color);
 }
 
 /* ============================================= */
@@ -149,18 +154,16 @@ select {
 
 /* Home */
 
-.main-subtitle {
-  display: block;
+.main-title {
   text-align: center;
-  margin: 8vh 3vw;
+  font-weight: 600;
   color: var(--blue-general);
 }
 
-.main-question {
-  color: var(--blue-general);
-  display: block;
+.main-subtitle {
   text-align: center;
-  margin-bottom: 1rem;
+  margin: 3rem 2vw;
+  color: var(--blue-general);
 }
 
 .main-scroll {
@@ -190,6 +193,12 @@ select {
 /* ============================================= */
 /*=============== ABOUT STYLES ==================*/
 /* ============================================= */
+
+.about-title {
+  text-align: center;
+  font-weight: 600;
+  color: var(--blue-general);
+}
 
 .section-about {
   margin: 0 auto;
@@ -254,6 +263,7 @@ select {
 .services-title {
   text-align: center;
   margin-top: 5rem;
+  font-weight: 600;
   color: var(--blue-general);
 }
 
@@ -471,11 +481,6 @@ i {
   left: 29vw;
 }
 
-.active-link {
-  border-bottom: 2px solid var(--font-white-color);
-  padding-bottom: 1px;
-}
-
 /* ============================================= */
 /*=============== MEDIA QUERIES =================*/
 /* ============================================= */
@@ -486,6 +491,7 @@ i {
   .header-container {
     flex-direction: row;
     background-color: var(--blue-general);
+    box-shadow: 0 5px 20px #fffa;
   }
 
   .header-box-img {
@@ -520,10 +526,6 @@ i {
     margin: 15vh 2vw 5vh;
   }
 
-  .main-question {
-    font-size: 1.2rem;
-  }
-
   .br-1,
   .br-2 {
     display: block;
@@ -535,6 +537,12 @@ i {
     margin: 5px 10px;
   }
 
+  /* ABOUT */
+
+  .about-title {
+    margin: 2.5rem 0;
+  }
+
   .about-bluebox-title {
     top: 5px;
   }
@@ -544,10 +552,6 @@ i {
   }
 
   /* SERVICES */
-
-  .services-title {
-    font-size: 1.25rem;
-  }
 
   .services-box {
     width: 80vw;
@@ -588,18 +592,28 @@ i {
   }
 
   .swiper-button-next {
-    right: 80vw;
+    right: 79vw;
     top: 40%;
   }
 
   .swiper-button-prev {
-    left: 80vw;
+    left: 79vw;
     top: 40%;
   }
 }
 
 @media screen and (min-width: 768px) {
+  /*HEADER*/
+
+  .header-nav-box {
+    box-shadow: 0 5px 20px #fffa;
+  }
+
   /*main*/
+
+  .main-title {
+    font-size: 2rem;
+  }
 
   .main-subtitle {
     font-size: 1.5rem;
@@ -607,10 +621,6 @@ i {
 
   .subtitle-margin {
     margin: 35vh 2vw 5vh;
-  }
-
-  .main-question {
-    font-size: 1.5rem;
   }
 
   .br-1 {
@@ -629,13 +639,30 @@ i {
     width: 200px;
     height: 200px;
     margin: 15px 20px;
+    transition: all 0.3s;
+  }
+
+  .main-scroll-box:hover .main-scroll-img {
+    box-shadow: 0 10px 10px var(--blue-general);
+    transform: translateY(-10px);
+  }
+
+  .main-scroll-box:hover .main-scroll-img-text {
+    text-shadow: 0 -20px 5px var(--font-white-color);
   }
 
   .main-scroll-img-text {
     font-size: 1.25rem;
+    text-shadow: 0 0px 0px var(--blue-general);
+    transition: all 0.3s;
   }
 
   /* About */
+
+  .about-title {
+    margin-top: 5rem;
+    font-size: 2rem;
+  }
 
   .section-about {
     gap: 3rem;
@@ -795,7 +822,7 @@ i {
 
   .hashtag {
     display: block;
-    font-size: 1.45rem;
+    font-size: 2rem;
     font-weight: bold;
     color: #e7cc43;
     margin-bottom: 0.5rem;

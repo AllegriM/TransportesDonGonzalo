@@ -48,7 +48,7 @@
         <ul class="header-nav-box">
           <li class="header-nav-box-link"><a class="nav-li-link-about" href="#about">CONOCENOS</a></li>
           <li class="header-nav-box-link"><a class="nav-li-link-services" href="#services">SERVICIOS</a></li>
-          <li class="header-nav-box-link"><a class="nav-li-link-faq" href="#faq">PREGUNTAS FRECUENTES</a></li>
+          <li class="header-nav-box-link"><a class="nav-li-link-faq" href="#faq">AYUDA</a></li>
           <li class="header-nav-box-link"><a class="nav-li-link-contact" href="#contact">CONTACTO</a></li>
         </ul>
       </nav>
@@ -57,36 +57,34 @@
     <main>
       <!-- HOME SECTION -->
       <section id="home">
-        <h2 class="main-subtitle subtitle-margin">
+        <h2 class="main-title subtitle-margin">¿Qué nos diferencia del resto?</h2>
+        <div class="main-subtitle">
           Podemos coberturar tu requerimiento de <span class="br-1"></span> <strong>transporte de agua</strong> bajo los
           <span class="br-2"></span>
           <strong>mejores estándares</strong>
-        </h2>
-        <span class="main-question">¿Qué nos diferencia del resto?</span>
+        </div>
         <div class="main-scroll">
-          <div>
+          <div class="main-scroll-box">
             <img class="main-scroll-img" src="./imgs/Peso-exacto.jpeg" />
             <span class="main-scroll-img-text">Peso exacto</span>
           </div>
-          <div>
+          <div class="main-scroll-box">
             <img class="main-scroll-img" src="./imgs/Protocolo-y-salubridad.jpeg" />
             <span class="main-scroll-img-text">Protocolos y salubridad</span>
           </div>
-          <div>
+          <div class="main-scroll-box">
             <img class="main-scroll-img" src="./imgs/Entrega-de-reportes.jpeg" />
             <span class="main-scroll-img-text">Entregas de reportes</span>
           </div>
-          <div>
+          <div class="main-scroll-box">
             <img class="main-scroll-img" src="./imgs/Precio-competitivo.jpeg" />
             <span class="main-scroll-img-text">Precio competitivo</span>
           </div>
         </div>
-        <span class="main-subtitle">
-          ¡Nos motiva contribuir al dearrollo de la región al participar de los procesos y proyectos de nuestros clientes!
-        </span>
       </section>
 
       <!-- ABOUT US SECTION -->
+      <h2 class="about-title">¿Quienes Somos?</h2>
       <section id="about" class="section-about">
         <div class="about-images">
           <!-- swiper -->
@@ -239,7 +237,7 @@
       const swiper = new Swiper(".mySwiper", {
         loop: true,
         slidesPerView: 3,
-        spaceBetween: 20,
+        spaceBetween: 30,
         loopFillGroupWithBlank: true,
         loop: true,
         pagination: {
