@@ -207,7 +207,6 @@ select {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* padding: 0 3vw; */
 }
 
 .about-banner-img {
@@ -259,10 +258,6 @@ select {
 /* ================================================= */
 /*=============== SERVICES STYLES ==================*/
 /* =============================================== */
-
-.services-container {
-  overflow-x: hidden;
-}
 
 .services-title {
   text-align: center;
@@ -376,7 +371,6 @@ select {
   flex-direction: column;
   justify-content: center;
   gap: 40px;
-  height: 80vh;
 }
 
 .contact-title {
@@ -395,6 +389,7 @@ select {
 .contact-form {
   display: flex;
   margin: 0 auto;
+  padding-bottom: 2rem;
   margin-bottom: 10%;
   flex-direction: column;
   gap: 30px;
@@ -446,10 +441,10 @@ i {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 50px;
   width: 100%;
   left: 0;
   bottom: 0;
+  padding: 1rem 0;
   position: absolute;
   background-color: var(--yellow-header);
 }
@@ -504,6 +499,10 @@ i {
 
 .swiper-button-prev {
   left: 29vw;
+}
+
+.section {
+  overflow-x: hidden;
 }
 
 /* ============================================= */
@@ -624,6 +623,11 @@ i {
   .swiper-button-prev {
     left: 79vw;
     top: 40%;
+  }
+
+  .section {
+    padding-top: 10vh;
+    margin-top: -10vh;
   }
 }
 
@@ -781,7 +785,6 @@ i {
   .contact-form {
     position: relative;
     display: flex;
-    margin: 0 auto;
     flex-direction: column;
     gap: 30px;
     max-width: 800px;
@@ -851,6 +854,11 @@ i {
     font-weight: bold;
     color: #e7cc43;
     margin-bottom: 0.5rem;
+  }
+
+  .section {
+    padding-top: 30vh;
+    margin-top: -30vh;
   }
 }
 
