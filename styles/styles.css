@@ -569,7 +569,7 @@ i {
   }
 
   .about-bluebox-title {
-    top: 5px;
+    top: 15px;
   }
 
   .about-objetivo {
@@ -785,7 +785,7 @@ i {
     gap: 30px;
     max-width: 800px;
     width: 100%;
-    padding-right: 5vw;
+    padding-right: 1rem;
   }
 
   .contact-form::after {
@@ -819,7 +819,7 @@ i {
     gap: 30px;
     background-color: transparent;
     align-items: flex-start;
-    margin-left: 5vw;
+    margin-left: 1rem;
   }
 
   .social-data-container {

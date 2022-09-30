@@ -46,3 +46,24 @@ faqs.forEach(box => {
 services.forEach(box => {
     observerReveal.observe(box)
 })
+
+// Send email
+
+const form = document.querySelector('.contact-form');
+const nameInput = document.querySelector('#nombre');
+const emailInput = document.querySelector('#email');
+const messageInput = document.querySelector('#descripcion');
+const buttonSend = document.querySelector('.form-button');
+
+// Complete input forms and open email window
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    window.open(`
+    mailto:fernandinhocelis@gmail.com
+    ?subject= Este asunto esta hardcodeado
+    &body= Hola, mi nombre es ${nameInput.value},
+    ${messageInput.value}
+    `);
+    form.reset();
+});
