@@ -1,8 +1,9 @@
 const sections = document.querySelectorAll('section');
 
-const navigationHeight = document.querySelector('.header')
+const navigationHeight = document.querySelector('#header').offsetHeight;
+console.log(navigationHeight)
 
-document.documentElement.style.setProperty('scroll-padding', navigationHeight + "px")
+document.documentElement.style.setProperty('--scroll-padding', navigationHeight + 20 + "px")
 // If intersection observer is on section then add underline to nav bar link
 const options = {
     root: null,
