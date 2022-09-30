@@ -27,3 +27,22 @@ const observer = new IntersectionObserver(function (entries, observer) {
 sections.forEach(section => {
     observer.observe(section);
 });
+
+const faqs = document.querySelectorAll('.faq-box')
+const services = document.querySelectorAll('.services-box')
+
+const observerReveal = new IntersectionObserver(function (entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('scroll-reveal');
+        }
+    })
+})
+
+faqs.forEach(box => {
+    observerReveal.observe(box)
+})
+
+services.forEach(box => {
+    observerReveal.observe(box)
+})
