@@ -23,7 +23,6 @@ html {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100vh;
 }
 
 body,
@@ -625,6 +624,11 @@ i {
     left: 79vw;
     top: 40%;
   }
+
+  .section {
+    padding-top: 10vh;
+    margin-top: -10vh;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -691,20 +695,10 @@ i {
 
   .section-about {
     gap: 3rem;
-    flex-direction: column-reverse;
-  }
-
-  .about-images {
-    order: 1;
-  }
-
-  .about-info {
-    order: 3;
   }
 
   .about-objetivo {
     margin: 2rem 0;
-    order: 2;
     flex-direction: row;
     justify-content: center;
     gap: 40px;
@@ -785,7 +779,7 @@ i {
     gap: 30px;
     max-width: 800px;
     width: 100%;
-    padding-right: 1rem;
+    padding-right: 5vw;
   }
 
   .contact-form::after {
@@ -819,7 +813,7 @@ i {
     gap: 30px;
     background-color: transparent;
     align-items: flex-start;
-    margin-left: 1rem;
+    margin-left: 5vw;
   }
 
   .social-data-container {
@@ -849,7 +843,12 @@ i {
     font-size: 2rem;
     font-weight: bold;
     color: #e7cc43;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .section {
+    padding-top: 30vh;
+    margin-top: -30vh;
   }
 }
 
