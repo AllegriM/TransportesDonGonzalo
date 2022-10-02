@@ -164,6 +164,7 @@ select {
   text-align: center;
   margin: 2rem 2vw;
   color: var(--blue-general);
+  display: block;
 }
 
 .main-scroll {

@@ -1,14 +1,16 @@
-const sections = document.querySelectorAll('section');
+//scroll smooth
 
 const navigationHeight = document.querySelector('#header').offsetHeight;
-console.log(navigationHeight)
 
 document.documentElement.style.setProperty('--scroll-padding', navigationHeight + 20 + "px")
-// If intersection observer is on section then add underline to nav bar link
 const options = {
     root: null,
     threshold: .5
 };
+
+//link active
+
+const sections = document.querySelectorAll('section');
 
 const observer = new IntersectionObserver(function (entries, observer) {
     entries.forEach(entry => {
@@ -28,6 +30,8 @@ const observer = new IntersectionObserver(function (entries, observer) {
 sections.forEach(section => {
     observer.observe(section);
 });
+
+//scroll reveal
 
 const faqs = document.querySelectorAll('.faq-box')
 const services = document.querySelectorAll('.services-box')
