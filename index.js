@@ -52,23 +52,25 @@ services.forEach(box => {
     observerReveal.observe(box)
 })
 
-// Send email
+//EMAIL JS
 
-const form = document.querySelector('.contact-form');
-const nameInput = document.querySelector('#nombre');
-const emailInput = document.querySelector('#email');
-const messageInput = document.querySelector('#descripcion');
-const buttonSend = document.querySelector('.form-button');
+const btn = document.getElementById('button');
 
-// Complete input forms and open email window
+document.getElementById('form')
+    .addEventListener('submit', function (event) {
+        event.preventDefault();
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    window.open(`
-    mailto:fernandinhocelis@gmail.com
-    ?subject= Este asunto esta hardcodeado
-    &body= Hola, mi nombre es ${nameInput.value},
-    ${messageInput.value}
-    `);
-    form.reset();
-});
+        btn.value = 'Enviando...';
+
+        const serviceID = 'default_service';
+        const templateID = 'template_ukg47ij';
+
+        emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+                btn.value = 'Enviar';
+                alert('Mensaje enviado exitosamente!');
+            }, (err) => {
+                btn.value = 'Enviar';
+                alert(JSON.stringify(err));
+            });
+    });

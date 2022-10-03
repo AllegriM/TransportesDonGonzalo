@@ -46,6 +46,12 @@
     <!-- LINK CSS -->
     <link rel="stylesheet" href="./styles/styles.css" />
 
+    <!-- EMILJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      emailjs.init("AuiAvAqIr8mrGLc8S");
+    </script>
+
     <!-- SCRIPT -->
     <script defer src="./index.js"></script>
 
@@ -212,20 +218,20 @@
         <strong>¡no dudes en consultarnos!</strong>
       </h2>
       <div class="contact-data">
-        <form class="contact-form">
+        <form id="form" class="contact-form">
           <div class="input-form">
-            <label for="nombre">Nombre</label>
-            <input class="contact-input" id="nombre" type="text" placeholder="Introduzca su nombre" />
+            <label for="from_name">Nombre</label>
+            <input required name="from_name" class="contact-input" id="from_name" type="text" placeholder="Introduzca su nombre" />
           </div>
           <div class="input-form">
-            <label for="email">Correo electrónico</label>
-            <input class="contact-input" id="email" type="text" placeholder="ejemplo@gmail.com" />
+            <label for="emil_id">Correo electrónico</label>
+            <input required name="email_id" class="contact-input" id="email_id" type="text" placeholder="ejemplo@gmail.com" />
           </div>
           <div class="input-form">
-            <label for="descripcion">¿En qué podemos ayudarte?</label>
-            <textarea class="contact-input" id="descripcion" type="text" placeholder="Deja tu mensaje aquí"></textarea>
+            <label for="messege">¿En qué podemos ayudarte?</label>
+            <textarea required name="message" id="message" class="contact-input" type="text" placeholder="Deja tu mensaje aquí"></textarea>
           </div>
-          <button class="form-button">Enviar</button>
+          <input type="submit" id="button" class="form-button" value="Enviar" />
         </form>
 
         <div class="social-data">
