@@ -43,17 +43,20 @@
     <!-- CDN SWIPER -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
-    <!-- LINK CSS -->
-    <link rel="stylesheet" href="./styles/styles.css" />
-
     <!-- EMILJS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
       emailjs.init("AuiAvAqIr8mrGLc8S");
     </script>
 
+    <!-- SWEET ALERT -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <!-- SCRIPT -->
     <script defer src="./index.js"></script>
+
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="./styles/styles.css" />
 
     <!-- Title -->
     <title>Transportes Don Gonzalo</title>
@@ -229,9 +232,9 @@
           </div>
           <div class="input-form">
             <label for="messege">¿En qué podemos ayudarte?</label>
-            <textarea required name="message" id="message" class="contact-input" type="text" placeholder="Deja tu mensaje aquí"></textarea>
+            <textarea name="message" id="message" class="contact-input" type="text" placeholder="Deja tu mensaje aquí"></textarea>
           </div>
-          <input type="submit" id="button" class="form-button" value="Enviar" />
+          <input required type="submit" id="button" class="form-button" value="Enviar" />
         </form>
 
         <div class="social-data">

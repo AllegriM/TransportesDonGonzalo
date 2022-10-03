@@ -866,3 +866,11 @@ i {
   transform: translate(0) !important;
   filter: opacity(1);
 }
+
+.swal2-container {
+  z-index: 99999;
+}
+
+.swal2-styled {
+  background-color: var(--blue-general) !important;
+}

@@ -59,6 +59,14 @@ const btn = document.getElementById('button');
 document.getElementById('form')
     .addEventListener('submit', function (event) {
         event.preventDefault();
+        if (document.querySelector('#from_name').value == '' || document.querySelector('#email_id') == '' || document.querySelector('#message') == '') {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Todos los campos son obligatorios',
+            })
+            return
+        }
 
         btn.value = 'Enviando...';
 
@@ -68,7 +76,10 @@ document.getElementById('form')
         emailjs.sendForm(serviceID, templateID, this)
             .then(() => {
                 btn.value = 'Enviar';
-                alert('Mensaje enviado exitosamente!');
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Correo enviado exitosamente!'
+                })
             }, (err) => {
                 btn.value = 'Enviar';
                 alert(JSON.stringify(err));
