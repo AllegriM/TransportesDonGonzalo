@@ -114,6 +114,7 @@ select {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: height 0.3s;
 }
 
 .header-img-mobile {
@@ -122,6 +123,7 @@ select {
 
 .header-img-desktop {
   width: 300px;
+  transition: width 0.3s;
 }
 
 .header-nav-box {
@@ -522,7 +524,7 @@ i {
 
   .header-box-img {
     width: 10vw;
-    height: 10vh;
+    height: 12vh;
     background-color: transparent;
   }
 
@@ -536,6 +538,7 @@ i {
 
   .header-nav-box {
     width: 90vw;
+    height: 100%;
     position: absolute;
     font-size: 10px;
     justify-content: space-around;

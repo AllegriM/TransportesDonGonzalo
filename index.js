@@ -24,6 +24,7 @@ const observer = new IntersectionObserver(function (entries, observer) {
         } else {
             navLink.classList.remove('active-link');
         }
+
     });
 }, options);
 
@@ -51,6 +52,33 @@ faqs.forEach(box => {
 services.forEach(box => {
     observerReveal.observe(box)
 })
+
+//header scroll 
+
+const header = document.querySelector('.header-box-img')
+const imgDesktop = document.querySelector('.header-img-desktop')
+
+if (window.screen.width > 768) {
+    window.onscroll = () => {
+        if (window.pageYOffset > 0) {
+            imgDesktop.style = "width: 250px"
+            header.style = "height: 15vh"
+        } else {
+            imgDesktop.style = "width: 300px"
+            header.style = "height: 20vh"
+        }
+    }
+} else {
+    window.onscroll = () => {
+        if (window.pageYOffset > 0) {
+            imgDesktop.style = "width: 250px"
+            header.style = "height: 10vh"
+        } else {
+            imgDesktop.style = "width: 300px"
+            header.style = "height: 12vh"
+        }
+    }
+}
 
 //EMAIL JS
 
