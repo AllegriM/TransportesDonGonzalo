@@ -1,8 +1,8 @@
 //scroll smooth
 
 const navigationHeight = document.querySelector('#header').offsetHeight;
-
 document.documentElement.style.setProperty('--scroll-padding', navigationHeight + 20 + "px")
+
 const options = {
     root: null,
     threshold: .5
@@ -56,26 +56,23 @@ services.forEach(box => {
 //header scroll 
 
 const header = document.querySelector('.header-box-img')
+const nav = document.querySelector('.header-nav-box')
 const imgDesktop = document.querySelector('.header-img-desktop')
+const imgNav = document.querySelector('.header-nav-img')
+const headerCont = document.querySelector('.header-container')
 
 if (window.screen.width > 768) {
     window.onscroll = () => {
-        if (window.pageYOffset > 0) {
-            imgDesktop.style = "width: 250px"
+        if (window.pageYOffset > 80) {
+            headerCont.style = 'transform: translateY(-15vh)'
+            imgNav.style = `pointer-events: all;
+            filter: opacity(1);`
+
+        } else {
             header.style = "height: 15vh"
-        } else {
-            imgDesktop.style = "width: 300px"
-            header.style = "height: 20vh"
-        }
-    }
-} else {
-    window.onscroll = () => {
-        if (window.pageYOffset > 0) {
-            imgDesktop.style = "width: 250px"
-            header.style = "height: 10vh"
-        } else {
-            imgDesktop.style = "width: 300px"
-            header.style = "height: 12vh"
+            headerCont.style = 'transform: translateY(0)'
+            imgNav.style = `pointer-events: none;
+            filter: opacity(0);`
         }
     }
 }
