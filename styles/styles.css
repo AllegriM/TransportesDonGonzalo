@@ -242,6 +242,7 @@ select {
   padding: 0.5rem 0.5rem 0.5rem 3rem;
   max-width: 360px;
   margin: 1rem 0;
+  transition: filter 0.2s;
 }
 
 .about-bluebox-title {
@@ -258,6 +259,7 @@ select {
   border-radius: 60%;
   color: var(--blue-general);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transition: all 0.2s;
 }
 
 .about-bluebox-desc {
@@ -304,6 +306,7 @@ select {
   position: absolute;
   border-radius: 50%;
   top: -3rem;
+  transition: all 0.2s;
 }
 
 .services-box-span {
@@ -435,11 +438,16 @@ label {
   background-color: var(--blue-general);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
-  padding: 1rem 5rem;
+  padding: 1rem 0;
   width: 200px;
-  border: none;
   color: var(--font-white-color);
   cursor: pointer;
+}
+
+.form-button:active {
+  margin: 0.2rem auto;
+  padding: 0.8rem 0;
+  width: 190px;
 }
 
 textarea {
@@ -635,10 +643,28 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
+  h2 {
+    transition: all 0.2s;
+  }
+
+  h2:hover {
+    text-shadow: 0 0 3px var(--yellow-header);
+    letter-spacing: 1px;
+  }
+
   /*HEADER*/
 
   .header-nav-box {
     box-shadow: 0 5px 20px #fffa;
+  }
+
+  .header-nav-box-link a:hover {
+    color: var(--yellow-header);
+    text-shadow: 0 0 2px var(--yellow-header);
+  }
+
+  .active-link:hover {
+    border-bottom: 3px solid var(--yellow-header);
   }
 
   /*main*/
@@ -724,6 +750,16 @@ footer {
     font-weight: 100;
   }
 
+  .about-bluebox:hover .about-bluebox-title {
+    width: 6rem;
+    height: 6rem;
+    top: -3.5rem;
+  }
+
+  .about-bluebox:hover {
+    filter: drop-shadow(0 0 5px #000);
+  }
+
   /* SERVICES */
 
   .services-title {
@@ -742,6 +778,16 @@ footer {
     margin: 5rem 2rem;
   }
 
+  .services-box:hover .services-box-icon {
+    width: 6rem;
+    height: 6rem;
+    top: -3.5rem;
+  }
+
+  .services-box:hover {
+    filter: drop-shadow(0 0 5px #000);
+  }
+
   /* FAQ */
 
   .faq-box {
@@ -753,6 +799,11 @@ footer {
     padding: 0 5rem;
   }
 
+  .faq-subtitle {
+    margin-top: 2rem;
+    font-size: 2rem;
+  }
+
   /* Contact */
 
   #contact {
@@ -760,6 +811,7 @@ footer {
   }
 
   .contact-title {
+    margin-top: 2rem;
     font-size: 2rem;
   }
 
@@ -799,6 +851,8 @@ footer {
     resize: none;
   }
 
+  /* FOOTER */
+
   .social-data {
     position: relative;
     display: flex;
@@ -822,9 +876,30 @@ footer {
 
   .social-info {
     gap: 20px;
+    position: relative;
   }
 
-  i {
+  .social-info::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--blue-general);
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    transition: width 0.5s;
+  }
+
+  .social-info:hover i {
+    transform: rotateY(360deg);
+  }
+
+  .social-info:hover::after {
+    width: 91%;
+  }
+
+  .social-info i {
+    transition: transform 0.5s;
     font-size: 1.45rem;
   }
 
