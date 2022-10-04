@@ -23,7 +23,8 @@ html {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100vh;
+  scroll-padding-top: var(--scroll-padding);
+  /* scroll-padding-top: 100vh; */
 }
 
 body,

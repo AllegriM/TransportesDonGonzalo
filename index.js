@@ -1,7 +1,7 @@
 //scroll smooth
 
-const navigationHeight = document.querySelector('#header').offsetHeight;
-document.documentElement.style.setProperty('--scroll-padding', navigationHeight + 20 + "px")
+const navigationHeight = document.querySelector('.header-nav-box').offsetHeight;
+document.documentElement.style.setProperty('--scroll-padding', navigationHeight + "px")
 
 const options = {
     root: null,
