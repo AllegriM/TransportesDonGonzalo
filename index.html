@@ -18,21 +18,42 @@
   <!-- CDN SWIPER -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
-  <!-- LINK CSS -->
-  <link rel="stylesheet" href="./styles/styles.css" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- GOOGLE FONTS  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;600;700;800&family=Rajdhani:wght@600;700&display=swap"
+    rel="stylesheet" />
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- CDN SWIPER -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+  <!-- EMILJS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    emailjs.init("AuiAvAqIr8mrGLc8S");
+  </script>
+
+  <!-- SWEET ALERT -->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <!-- SCRIPT -->
   <script defer src="./index.js"></script>
+
+  <!-- LINK CSS -->
+  <link rel="stylesheet" href="./styles/styles.css" />
 
   <!-- Title -->
   <title>Transportes Don Gonzalo</title>
 </head>
 
 <body>
-  <!-- <header class="header">
-    
-  </header> -->
-
   <header class="header-container" id="header">
     <div class="header-box-img">
       <a href="#home" class="header-box-img-link">
@@ -80,8 +101,16 @@
     </section>
 
     <!-- ABOUT US SECTION -->
-    <h2 class="about-title">¿Quienes Somos?</h2>
     <section id="about" class="section-about section">
+      <h2 class="about-title">¿Quienes Somos?</h2>
+      <div class="about-info">
+        <h3 class="main-subtitle">
+          Somos un negocio con<strong> 9 años de experiencia</strong> en el transporte y aprovisionamiento<span
+            class="br-1"></span> de agua no
+          potable mediante camiones cisterna.
+        </h3>
+        <span class="main-subtitle">Nos encargamos de cubrir los pedidos para construcciones, plantas o negocios.</span>
+      </div>
       <div class="about-images">
         <!-- swiper -->
         <div class="swiper mySwiper">
@@ -95,15 +124,6 @@
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
         </div>
-      </div>
-
-      <div class="about-info">
-        <h2 class="main-subtitle">
-          Somos un negocio con<strong> 9 años de experiencia</strong> en el transporte y aprovisionamiento<span
-            class="br-1"></span> de agua no
-          potable mediante camiones cisterna.
-        </h2>
-        <span class="main-subtitle">Nos encargamos de cubrir los pedidos para construcciones, plantas o negocios.</span>
       </div>
       <div class="about-objetivo">
         <div class="about-bluebox">
@@ -202,20 +222,23 @@
       <strong>¡no dudes en consultarnos!</strong>
     </h2>
     <div class="contact-data">
-      <form class="contact-form">
+      <form id="form" class="contact-form">
         <div class="input-form">
-          <label for="nombre">Nombre</label>
-          <input class="contact-input" id="nombre" type="text" placeholder="Introduzca su nombre" />
+          <label for="from_name">Nombre</label>
+          <input required name="from_name" class="contact-input" id="from_name" type="text"
+            placeholder="Introduzca su nombre" />
         </div>
         <div class="input-form">
-          <label for="email">Correo electrónico</label>
-          <input class="contact-input" id="email" type="text" placeholder="ejemplo@gmail.com" />
+          <label for="emil_id">Correo electrónico</label>
+          <input required name="email_id" class="contact-input" id="email_id" type="text"
+            placeholder="ejemplo@gmail.com" />
         </div>
         <div class="input-form">
-          <label for="descripcion">¿En qué podemos ayudarte?</label>
-          <textarea class="contact-input" id="descripcion" type="text" placeholder="Deja tu mensaje aquí"></textarea>
+          <label for="messege">¿En qué podemos ayudarte?</label>
+          <textarea name="message" id="message" class="contact-input" type="text"
+            placeholder="Deja tu mensaje aquí"></textarea>
         </div>
-        <button class="form-button">Enviar</button>
+        <input required type="submit" id="button" class="form-button" value="Enviar" />
       </form>
 
       <div class="social-data">
@@ -237,9 +260,9 @@
       </div>
     </div>
   </section>
-  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
   <!-- SWIPER -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script>
     const swiper = new Swiper(".mySwiper", {
       loop: true,

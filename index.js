@@ -1,14 +1,16 @@
-const sections = document.querySelectorAll('section');
+//scroll smooth
 
 const navigationHeight = document.querySelector('#header').offsetHeight;
-console.log(navigationHeight)
 
 document.documentElement.style.setProperty('--scroll-padding', navigationHeight + 20 + "px")
-// If intersection observer is on section then add underline to nav bar link
 const options = {
     root: null,
     threshold: .5
 };
+
+//link active
+
+const sections = document.querySelectorAll('section');
 
 const observer = new IntersectionObserver(function (entries, observer) {
     entries.forEach(entry => {
@@ -22,12 +24,15 @@ const observer = new IntersectionObserver(function (entries, observer) {
         } else {
             navLink.classList.remove('active-link');
         }
+
     });
 }, options);
 
 sections.forEach(section => {
     observer.observe(section);
 });
+
+//scroll reveal
 
 const faqs = document.querySelectorAll('.faq-box')
 const services = document.querySelectorAll('.services-box')
@@ -48,23 +53,63 @@ services.forEach(box => {
     observerReveal.observe(box)
 })
 
-// Send email
+//header scroll 
 
-const form = document.querySelector('.contact-form');
-const nameInput = document.querySelector('#nombre');
-const emailInput = document.querySelector('#email');
-const messageInput = document.querySelector('#descripcion');
-const buttonSend = document.querySelector('.form-button');
+const header = document.querySelector('.header-box-img')
+const imgDesktop = document.querySelector('.header-img-desktop')
 
-// Complete input forms and open email window
+if (window.screen.width > 768) {
+    window.onscroll = () => {
+        if (window.pageYOffset > 0) {
+            imgDesktop.style = "width: 250px"
+            header.style = "height: 15vh"
+        } else {
+            imgDesktop.style = "width: 300px"
+            header.style = "height: 20vh"
+        }
+    }
+} else {
+    window.onscroll = () => {
+        if (window.pageYOffset > 0) {
+            imgDesktop.style = "width: 250px"
+            header.style = "height: 10vh"
+        } else {
+            imgDesktop.style = "width: 300px"
+            header.style = "height: 12vh"
+        }
+    }
+}
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    window.open(`
-    mailto:fernandinhocelis@gmail.com
-    ?subject= Este asunto esta hardcodeado
-    &body= Hola, mi nombre es ${nameInput.value},
-    ${messageInput.value}
-    `);
-    form.reset();
-});
+//EMAIL JS
+
+const btn = document.getElementById('button');
+
+document.getElementById('form')
+    .addEventListener('submit', function (event) {
+        event.preventDefault();
+        if (document.querySelector('#from_name').value == '' || document.querySelector('#email_id') == '' || document.querySelector('#message') == '') {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Todos los campos son obligatorios',
+            })
+            return
+        }
+
+        btn.value = 'Enviando...';
+
+        const serviceID = 'default_service';
+        const templateID = 'template_ukg47ij';
+
+        emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+                btn.value = 'Enviar';
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Correo enviado exitosamente!'
+                })
+            }, (err) => {
+                btn.value = 'Enviar';
+                alert(JSON.stringify(err));
+            });
+    });
