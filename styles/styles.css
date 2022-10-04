@@ -372,7 +372,7 @@ select {
   flex-direction: column;
   justify-content: center;
   gap: 40px;
-  height: 70vh;
+  min-height: 70vh;
 }
 
 .contact-title {
