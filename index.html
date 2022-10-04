@@ -1,293 +1,288 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- GOOGLE FONTS  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;600;700;800&family=Rajdhani:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- CDN SWIPER -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- GOOGLE FONTS  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;600;700;800&family=Rajdhani:wght@600;700&display=swap"
-    rel="stylesheet" />
-  <!-- FONT AWESOME -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- CDN SWIPER -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./imgs/DonGonzalogo.png" type="image/x-icon" />
+    <!-- GOOGLE FONTS  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;600;700;800&family=Rajdhani:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- CDN SWIPER -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="./imgs/DonGonzalogo.png" type="image/x-icon">
-  <!-- GOOGLE FONTS  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;600;700;800&family=Rajdhani:wght@600;700&display=swap"
-    rel="stylesheet" />
-  <!-- FONT AWESOME -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- CDN SWIPER -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <!-- EMILJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      emailjs.init("AuiAvAqIr8mrGLc8S");
+    </script>
 
-  <!-- EMILJS -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script type="text/javascript">
-    emailjs.init("AuiAvAqIr8mrGLc8S");
-  </script>
+    <!-- SWEET ALERT -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-  <!-- SWEET ALERT -->
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- SCRIPT -->
+    <script defer src="./index.js"></script>
 
-  <!-- SCRIPT -->
-  <script defer src="./index.js"></script>
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="./styles/styles.css" />
 
-  <!-- LINK CSS -->
-  <link rel="stylesheet" href="./styles/styles.css" />
+    <!-- Title -->
+    <title>Transportes Don Gonzalo</title>
+  </head>
 
-  <!-- Title -->
-  <title>Transportes Don Gonzalo</title>
-</head>
-
-<body>
-  <header class="header-container" id="header">
-    <div class="header-box-img">
-      <a href="#home" class="header-box-img-link">
-        <img class="header-img-desktop" src="./imgs/don-gonzalo-logo.png" />
-        <img class="header-img-mobile" src="./imgs//DonGonzalogo.png" />
-      </a>
-    </div>
-    <nav>
-      <ul class="header-nav-box">
-        <a href="#home" class="header-nav-img">
-          <img src="/imgs/DonGonzalogo.png" alt="logo" />
+  <body>
+    <header class="header-container" id="header">
+      <div class="header-box-img">
+        <a href="#home" class="header-box-img-link">
+          <img class="header-img-desktop" src="./imgs/don-gonzalo-logo.png" />
+          <img class="header-img-mobile" src="./imgs//DonGonzalogo.png" />
         </a>
-        <li class="header-nav-box-link"><a class="nav-li-link-about" href="#about">CONOCENOS</a></li>
-        <li class="header-nav-box-link"><a class="nav-li-link-services" href="#services">SERVICIOS</a></li>
-        <li class="header-nav-box-link"><a class="nav-li-link-faq" href="#faq">AYUDA</a></li>
-        <li class="header-nav-box-link"><a class="nav-li-link-contact" href="#contact">CONTACTO</a></li>
-      </ul>
-    </nav>
-  </header>
+      </div>
+      <nav>
+        <ul class="header-nav-box">
+          <a href="#home" class="header-nav-img">
+            <img src="/imgs/DonGonzalogo.png" alt="logo" />
+          </a>
+          <li class="header-nav-box-link"><a class="nav-li-link-about" href="#about">CONOCENOS</a></li>
+          <li class="header-nav-box-link"><a class="nav-li-link-services" href="#services">SERVICIOS</a></li>
+          <li class="header-nav-box-link"><a class="nav-li-link-faq" href="#faq">AYUDA</a></li>
+          <li class="header-nav-box-link"><a class="nav-li-link-contact" href="#contact">CONTACTO</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <main>
-    <!-- HOME SECTION -->
-    <section id="home" class="section">
-      <h2 class="main-title subtitle-margin">¿Qué nos diferencia del resto?</h2>
-      <div class="main-subtitle">
-        Podemos coberturar tu requerimiento de <span class="br-1"></span> <strong>transporte de agua</strong> bajo los
-        <span class="br-2"></span>
-        <strong>mejores estándares</strong>
-      </div>
-      <div class="main-scroll">
-        <div class="main-scroll-box">
-          <img class="main-scroll-img" src="./imgs/Peso-exacto.jpeg" />
-          <span class="main-scroll-img-text">Peso exacto</span>
+    <main>
+      <!-- HOME SECTION -->
+      <section id="home" class="section">
+        <h2 class="main-title subtitle-margin">¿Qué nos diferencia del resto?</h2>
+        <div class="main-subtitle">
+          Podemos coberturar tu requerimiento de <span class="br-1"></span> <strong>transporte de agua</strong> bajo los
+          <span class="br-2"></span>
+          <strong>mejores estándares</strong>
         </div>
-        <div class="main-scroll-box">
-          <img class="main-scroll-img" src="./imgs/Protocolo-y-salubridad.jpeg" />
-          <span class="main-scroll-img-text">Protocolos y salubridad</span>
-        </div>
-        <div class="main-scroll-box">
-          <img class="main-scroll-img" src="./imgs/Entrega-de-reportes.jpeg" />
-          <span class="main-scroll-img-text">Entregas de reportes</span>
-        </div>
-        <div class="main-scroll-box">
-          <img class="main-scroll-img" src="./imgs/Precio-competitivo.jpeg" />
-          <span class="main-scroll-img-text">Precio competitivo</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT US SECTION -->
-    <section id="about" class="section-about section">
-      <h2 class="about-title">¿Quienes Somos?</h2>
-      <div class="about-info">
-        <h3 class="main-subtitle">
-          Somos un negocio con<strong> 9 años de experiencia</strong> en el transporte y aprovisionamiento<span
-            class="br-1"></span> de agua no
-          potable mediante camiones cisterna.
-        </h3>
-        <span class="main-subtitle">Nos encargamos de cubrir los pedidos para construcciones, plantas o negocios.</span>
-      </div>
-      <div class="about-images">
-        <!-- swiper -->
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <img class="swiper-slide about-banner-img" src="./imgs/vision1.jpeg" alt="imagen de camion" />
-            <img class="swiper-slide about-banner-img" src="./imgs/vision2.jpeg" alt="imagen de camion" />
-            <img class="swiper-slide about-banner-img" src="./imgs/vision3.jpeg" alt="imagen de camion" />
-            <img class="swiper-slide about-banner-img" src="./imgs/vision4.jpeg" alt="imagen de camion" />
+        <div class="main-scroll">
+          <div class="main-scroll-box">
+            <img class="main-scroll-img" src="./imgs/Peso-exacto.jpeg" />
+            <span class="main-scroll-img-text">Peso exacto</span>
           </div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+          <div class="main-scroll-box">
+            <img class="main-scroll-img" src="./imgs/Protocolo-y-salubridad.jpeg" />
+            <span class="main-scroll-img-text">Protocolos y salubridad</span>
+          </div>
+          <div class="main-scroll-box">
+            <img class="main-scroll-img" src="./imgs/Entrega-de-reportes.jpeg" />
+            <span class="main-scroll-img-text">Entregas de reportes</span>
+          </div>
+          <div class="main-scroll-box">
+            <img class="main-scroll-img" src="./imgs/Precio-competitivo.jpeg" />
+            <span class="main-scroll-img-text">Precio competitivo</span>
+          </div>
         </div>
-      </div>
-      <div class="about-objetivo">
-        <div class="about-bluebox">
-          <div class="about-bluebox-title">MISION</div>
-          <p class="about-bluebox-desc blue-box-texts">
-            Ser el aliado en el desarrollo de los proyectos de nuestros clientes, solucionando sus requerimientos de
-            agua y transporte a través de
-            la <strong>calidad, puntualidad y confianza</strong>
-          </p>
+      </section>
+
+      <!-- ABOUT US SECTION -->
+      <section id="about" class="section-about section">
+        <h2 class="about-title">¿Quienes Somos?</h2>
+        <div class="about-info">
+          <h3 class="main-subtitle">
+            Somos un negocio con<strong> 9 años de experiencia</strong> en el transporte y aprovisionamiento<span class="br-1"></span> de agua no
+            potable mediante camiones cisterna.
+          </h3>
+          <span class="main-subtitle">Nos encargamos de cubrir los pedidos para construcciones, plantas o negocios.</span>
         </div>
-        <div class="about-bluebox">
-          <div class="about-bluebox-title">VISION</div>
-          <p class="about-bluebox-desc blue-box-texts">
-            Ser el aliado líder en transporte y provisión de agua, contribuyendo al desarrollo de la región a través de
-            nuestra participación en la
-            ejecución de <strong>proyectos sociales y personales.</strong>
-          </p>
+        <div class="about-images">
+          <!-- swiper -->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <img class="swiper-slide about-banner-img" src="./imgs/vision1.jpeg" alt="imagen de camion" />
+              <img class="swiper-slide about-banner-img" src="./imgs/vision2.jpeg" alt="imagen de camion" />
+              <img class="swiper-slide about-banner-img" src="./imgs/vision3.jpeg" alt="imagen de camion" />
+              <img class="swiper-slide about-banner-img" src="./imgs/vision4.jpeg" alt="imagen de camion" />
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
         </div>
+        <div class="about-objetivo">
+          <div class="about-bluebox">
+            <div class="about-bluebox-title">MISION</div>
+            <p class="about-bluebox-desc blue-box-texts">
+              Ser el aliado en el desarrollo de los proyectos de nuestros clientes, solucionando sus requerimientos de agua y transporte a través de
+              la <strong>calidad, puntualidad y confianza</strong>
+            </p>
+          </div>
+          <div class="about-bluebox">
+            <div class="about-bluebox-title">VISION</div>
+            <p class="about-bluebox-desc blue-box-texts">
+              Ser el aliado líder en transporte y provisión de agua, contribuyendo al desarrollo de la región a través de nuestra participación en la
+              ejecución de <strong>proyectos sociales y personales.</strong>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES SECTION -->
+      <section id="services" class="section">
+        <h2 class="services-title">¡Los mejores servicios para ti!</h2>
+        <div class="services-container">
+          <div class="services-box">
+            <img class="services-box-icon" src="./imgs/Gota circulo.png" />
+            <span class="services-box-span">Venta de agua</span>
+            <p class="blue-box-texts">
+              Don Gonzalo se encarga de proveerte de agua no potable para tu proyecto o empresa, hasta el punto que indiques, bajo las mejores
+              condiciones de calidad y salubridad.
+            </p>
+          </div>
+          <div class="services-box">
+            <img class="services-box-icon" src="./imgs/Camion circulo.png" />
+            <span class="services-box-span">Transporte de agua</span>
+            <p class="services-box-text blue-box-texts">
+              Don Gonzalo se encarga de transportar el agua no potable desde y hasta donde indiques, bajo las mejores condiciones de calidad y
+              salubridad.
+            </p>
+          </div>
+          <div class="services-box">
+            <img class="services-box-icon" src="./imgs/Ubicacion circulo.png" />
+            <span class="services-box-span">Nuestras zonas</span>
+            <p class="services-box-text blue-box-texts">Zona norte del Perú, en las ciudades de Chiclayo, Pacasmayo y Trujillo.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="section">
+        <h2 class="faq-subtitle">Te compartimos las preguntas más frecuentes que recibimos</h2>
+        <div class="faq-container">
+          <div class="faq-box">
+            <span class="faq-box-title">¿Cómo entregamos el producto-servicio? </span>
+            <p class="faq-box-text blue-box-texts">
+              Mediante nuestros camiones cisterna, el agua es llevada hasta el punto indicado por el cliente, con los implementos y requisitos
+              necesarios para dejar el agua en el pozo o lugar específico.
+            </p>
+          </div>
+          <div class="faq-box">
+            <span class="faq-box-title">¿En qué ciudades prestan servicios? </span>
+            <p class="faq-box-text blue-box-texts">
+              <span>
+                Podemos coberturar requerimientos en la zona norte del Perú, en las ciudades de <strong>Chiclayo, Pacasmayo y Trujillo</strong>,
+                previa cotización.
+              </span>
+            </p>
+          </div>
+          <div class="faq-box">
+            <span class="faq-box-title">¿Entregan comprobante (factura) y reportería? </span>
+            <p class="faq-box-text blue-box-texts">
+              Sí. Somos una empresa formal, por lo que emitimos comprobantes. El cliente puede además solicitar un reporte mensual o total del
+              servicio.
+            </p>
+          </div>
+          <div class="faq-box">
+            <span class="faq-box-title">¿Cuentan con protocolos y seguridad en el trabajo? </span>
+            <p class="faq-box-text blue-box-texts">
+              Sí. Contamos con nuestros protocolos de salubridad, así como nuestra gestión de seguridad y salud en el trabajo.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <section id="contact" class="section">
+      <h2 class="contact-title">
+        Si deseas una cotización,<span class="br-1"></span>
+        <strong>¡no dudes en consultarnos!</strong>
+      </h2>
+      <div class="contact-data">
+        <form id="form" class="contact-form">
+          <div class="input-form">
+            <label for="from_name">Nombre</label>
+            <input required name="from_name" class="contact-input" id="from_name" type="text" placeholder="Introduzca su nombre" />
+          </div>
+          <div class="input-form">
+            <label for="emil_id">Correo electrónico</label>
+            <input required name="email_id" class="contact-input" id="email_id" type="text" placeholder="ejemplo@gmail.com" />
+          </div>
+          <div class="input-form">
+            <label for="messege">¿En qué podemos ayudarte?</label>
+            <textarea name="message" id="message" class="contact-input" type="text" placeholder="Deja tu mensaje aquí"></textarea>
+          </div>
+          <input required type="submit" id="button" class="form-button" value="Enviar" />
+        </form>
       </div>
     </section>
-
-    <!-- SERVICES SECTION -->
-    <section id="services" class="section">
-      <h2 class="services-title">¡Los mejores servicios para ti!</h2>
-      <div class="services-container">
-        <div class="services-box">
-          <img class="services-box-icon" src="./imgs/Gota circulo.png" />
-          <span class="services-box-span">Venta de agua</span>
-          <p class="blue-box-texts">
-            Don Gonzalo se encarga de proveerte de agua no potable para tu proyecto o empresa, hasta el punto que
-            indiques, bajo las mejores
-            condiciones de calidad y salubridad.
-          </p>
-        </div>
-        <div class="services-box">
-          <img class="services-box-icon" src="./imgs/Camion circulo.png" />
-          <span class="services-box-span">Transporte de agua</span>
-          <p class="services-box-text blue-box-texts">
-            Don Gonzalo se encarga de transportar el agua no potable desde y hasta donde indiques, bajo las mejores
-            condiciones de calidad y
-            salubridad.
-          </p>
-        </div>
-        <div class="services-box">
-          <img class="services-box-icon" src="./imgs/Ubicacion circulo.png" />
-          <span class="services-box-span">Nuestras zonas</span>
-          <p class="services-box-text blue-box-texts">Zona norte del Perú, en las ciudades de Chiclayo, Pacasmayo y
-            Trujillo.</p>
-        </div>
+    <footer>
+      <div class="social-data-container">
+        <span class="social-info">
+          <i class="fa-solid fa-envelope"></i>
+          <p class="social-text">fernandinhocelis@gmail.com</p>
+        </span>
+        <a href="https://www.linkedin.com/company/transportes-don-gonzalo/" target="_blank" class="social-info">
+          <i class="fa-brands fa-linkedin"></i>
+          <p class="social-text">Transportes Don Gonzalo</p>
+        </a>
+        <a href="https://www.facebook.com/TranportesDonGonzalo" target="_blank" class="social-info">
+          <i class="fa-brands fa-facebook"></i>
+          <p class="social-text">Transportes Don Gonzalo</p>
+        </a>
       </div>
-    </section>
+      <!-- <p class="hashtag">#EntendemosElNegocio</p> -->
+    </footer>
 
-    <!-- FAQ -->
-    <section id="faq" class="section">
-      <h2 class="faq-subtitle">Te compartimos las preguntas más frecuentes que recibimos</h2>
-      <div class="faq-container">
-        <div class="faq-box">
-          <span class="faq-box-title">¿Cómo entregamos el producto-servicio? </span>
-          <p class="faq-box-text blue-box-texts">
-            Mediante nuestros camiones cisterna, el agua es llevada hasta el punto indicado por el cliente, con los
-            implementos y requisitos
-            necesarios para dejar el agua en el pozo o lugar específico.
-          </p>
-        </div>
-        <div class="faq-box">
-          <span class="faq-box-title">¿En qué ciudades prestan servicios? </span>
-          <p class="faq-box-text blue-box-texts">
-            <span>
-              Podemos coberturar requerimientos en la zona norte del Perú, en las ciudades de <strong>Chiclayo,
-                Pacasmayo y Trujillo</strong>,
-              previa cotización.
-            </span>
-          </p>
-        </div>
-        <div class="faq-box">
-          <span class="faq-box-title">¿Entregan comprobante (factura) y reportería? </span>
-          <p class="faq-box-text blue-box-texts">
-            Sí. Somos una empresa formal, por lo que emitimos comprobantes. El cliente puede además solicitar un reporte
-            mensual o total del
-            servicio.
-          </p>
-        </div>
-        <div class="faq-box">
-          <span class="faq-box-title">¿Cuentan con protocolos y seguridad en el trabajo? </span>
-          <p class="faq-box-text blue-box-texts">
-            Sí. Contamos con nuestros protocolos de salubridad, así como nuestra gestión de seguridad y salud en el
-            trabajo.
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
-  <section id="contact" class="section">
-    <h2 class="contact-title">
-      Si deseas una cotización,<span class="br-1"></span>
-      <strong>¡no dudes en consultarnos!</strong>
-    </h2>
-    <div class="contact-data">
-      <form id="form" class="contact-form">
-        <div class="input-form">
-          <label for="from_name">Nombre</label>
-          <input required name="from_name" class="contact-input" id="from_name" type="text"
-            placeholder="Introduzca su nombre" />
-        </div>
-        <div class="input-form">
-          <label for="emil_id">Correo electrónico</label>
-          <input required name="email_id" class="contact-input" id="email_id" type="text"
-            placeholder="ejemplo@gmail.com" />
-        </div>
-        <div class="input-form">
-          <label for="messege">¿En qué podemos ayudarte?</label>
-          <textarea name="message" id="message" class="contact-input" type="text"
-            placeholder="Deja tu mensaje aquí"></textarea>
-        </div>
-        <input required type="submit" id="button" class="form-button" value="Enviar" />
-      </form>
-    </div>
-  </section>
-  <footer>
-    <div class="social-data-container">
-      <a href="#" class="social-info">
-        <i class="fa-solid fa-envelope"></i>
-        <p class="social-text">fernandinhocelis@gmail.com</p>
-      </a>
-      <a href="https://www.linkedin.com/company/transportes-don-gonzalo/" target="_blank" class="social-info">
-        <i class="fa-brands fa-linkedin"></i>
-        <p class="social-text">Transportes Don Gonzalo</p>
-      </a>
-      <a href="https://www.facebook.com/TranportesDonGonzalo" target="_blank" class="social-info">
-        <i class="fa-brands fa-facebook"></i>
-        <p class="social-text">Transportes Don Gonzalo</p>
-      </a>
-    </div>
-    <!-- <p class="hashtag">#EntendemosElNegocio</p> -->
-  </footer>
-
-  <!-- SWIPER -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-  <script>
-    const swiper = new Swiper(".mySwiper", {
-      loop: true,
-      slidesPerView: 3,
-      spaceBetween: 30,
-      loopFillGroupWithBlank: true,
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-    if (window.innerWidth <= 768) {
-      (swiper.slidesPerView = 1), (swiper.spaceBetween = 10);
-    } else {
-      (swiper.slidesPerView = 3), (swiper.spaceBetween = 60);
-    }
-  </script>
-</body>
-
+    <!-- SWIPER -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".mySwiper", {
+        loop: true,
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loopFillGroupWithBlank: true,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+      if (window.innerWidth <= 768) {
+        (swiper.slidesPerView = 1), (swiper.spaceBetween = 10);
+      } else {
+        (swiper.slidesPerView = 3), (swiper.spaceBetween = 60);
+      }
+    </script>
+  </body>
 </html>

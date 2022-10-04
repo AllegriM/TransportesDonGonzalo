@@ -242,7 +242,6 @@ select {
   padding: 0.5rem 0.5rem 0.5rem 3rem;
   max-width: 360px;
   margin: 1rem 0;
-  transition: filter 0.2s;
 }
 
 .about-bluebox-title {
