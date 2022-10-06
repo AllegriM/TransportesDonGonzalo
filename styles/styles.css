@@ -173,6 +173,7 @@ select {
   text-align: center;
   margin: 2rem 2vw;
   color: var(--blue-general);
+  display: block;
 }
 
 .main-scroll {
@@ -271,7 +272,7 @@ select {
 
 .services-title {
   text-align: center;
-  margin-top: 5rem;
+  margin-top: 2rem;
   font-weight: 600;
   color: var(--blue-general);
 }
@@ -323,7 +324,7 @@ select {
 
 .faq-subtitle {
   color: var(--blue-general);
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   width: 80vw;
   margin: 0 10vw 1rem;
   text-align: center;
@@ -386,7 +387,7 @@ select {
 }
 
 .contact-title {
-  font-size: 1.35rem;
+  font-size: 1.5rem;
   text-align: center;
   margin: 0 auto;
   color: var(--blue-general);
@@ -504,6 +505,14 @@ i {
   width: 150vw;
 }
 
+.swiper-slide {
+  transition: border 0.3s;
+}
+
+.swiper-slide-next {
+  border: 5px solid var(--blue-general);
+}
+
 .swiper-button-next {
   right: 29vw;
 }
@@ -514,6 +523,10 @@ i {
 
 .section {
   overflow-x: hidden;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--blue-general);
 }
 
 footer {
@@ -762,6 +775,7 @@ footer {
   /* SERVICES */
 
   .services-title {
+    margin-top: 5rem;
     font-size: 2rem;
   }
 

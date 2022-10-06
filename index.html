@@ -4,28 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- GOOGLE FONTS  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;600;700;800&family=Rajdhani:wght@600;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- FONT AWESOME -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <!-- CDN SWIPER -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./imgs/DonGonzalogo.png" type="image/x-icon" />
+    <meta
+      name="description"
+      content="Somos un negocio con 9 años de experiencia en el transporte y aprovisionamiento
+      de agua no potable mediante camiones cisterna."
+    />
+    <meta
+      name="keywords"
+      content="agua, transporte, aprovisionamiento, pedidos, construcciones, plantas, negocios, no potable, camiones, cisterna, calidad"
+    />
+    <meta name="author" content="Felipe Suarez, Marcos Allegri" />
+
+    <!-- Title -->
+    <title>Transportes Don Gonzalo</title>
+
     <!-- GOOGLE FONTS  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -41,8 +36,28 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- CDN SWIPER -->
+    <!-- SWIPER -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <!-- ICON -->
+    <link rel="shortcut icon" href="./imgs/DonGonzalogo.png" type="image/x-icon" />
+
+    <!-- GOOGLE FONTS  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;600;700;800&family=Rajdhani:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- EMILJS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -58,9 +73,6 @@
 
     <!-- LINK CSS -->
     <link rel="stylesheet" href="./styles/styles.css" />
-
-    <!-- Title -->
-    <title>Transportes Don Gonzalo</title>
   </head>
 
   <body>
@@ -218,30 +230,30 @@
           </div>
         </div>
       </section>
+      <section id="contact" class="section">
+        <h2 class="contact-title">
+          Si deseas una cotización,<span class="br-1"></span>
+          <strong>¡no dudes en consultarnos!</strong>
+        </h2>
+        <div class="contact-data">
+          <form id="form" class="contact-form">
+            <div class="input-form">
+              <label for="from_name">Nombre</label>
+              <input required name="from_name" class="contact-input" id="from_name" type="text" placeholder="Introduzca su nombre" />
+            </div>
+            <div class="input-form">
+              <label for="emil_id">Correo electrónico</label>
+              <input required name="email_id" class="contact-input" id="email_id" type="text" placeholder="ejemplo@gmail.com" />
+            </div>
+            <div class="input-form">
+              <label for="messege">¿En qué podemos ayudarte?</label>
+              <textarea name="message" id="message" class="contact-input" type="text" placeholder="Deja tu mensaje aquí"></textarea>
+            </div>
+            <input required type="submit" id="button" class="form-button" value="Enviar" />
+          </form>
+        </div>
+      </section>
     </main>
-    <section id="contact" class="section">
-      <h2 class="contact-title">
-        Si deseas una cotización,<span class="br-1"></span>
-        <strong>¡no dudes en consultarnos!</strong>
-      </h2>
-      <div class="contact-data">
-        <form id="form" class="contact-form">
-          <div class="input-form">
-            <label for="from_name">Nombre</label>
-            <input required name="from_name" class="contact-input" id="from_name" type="text" placeholder="Introduzca su nombre" />
-          </div>
-          <div class="input-form">
-            <label for="emil_id">Correo electrónico</label>
-            <input required name="email_id" class="contact-input" id="email_id" type="text" placeholder="ejemplo@gmail.com" />
-          </div>
-          <div class="input-form">
-            <label for="messege">¿En qué podemos ayudarte?</label>
-            <textarea name="message" id="message" class="contact-input" type="text" placeholder="Deja tu mensaje aquí"></textarea>
-          </div>
-          <input required type="submit" id="button" class="form-button" value="Enviar" />
-        </form>
-      </div>
-    </section>
     <footer>
       <div class="social-data-container">
         <span class="social-info">
